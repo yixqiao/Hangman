@@ -12,7 +12,9 @@ public class Main {
 
     public static void main(String[] args) {
         loadWords();
-        guessWord("hangman");
+        System.out.print("Word: ");
+        guessWord(sc.next());
+        sc.close();
     }
 
     private static void guessWord(String correctWord) {
@@ -20,7 +22,7 @@ public class Main {
         while (!game.isOver()) {
             char c = pickLetter(game);
             game.guess(c);
-            System.out.printf("%s: %s\n", c, game.word);
+            System.out.printf("%s: %s\n", c, game.word.toString().replaceAll("\\.", "_"));
         }
         System.out.println("\n\n\n\n--------------------------------------------------------------------------------");
         System.out.printf("%d incorrect %s. \n", game.wrong, (game.wrong == 1 ? "guess" : "guesses"));
@@ -41,7 +43,7 @@ public class Main {
         }
 
 
-        int count = 15; // sc.nextInt();
+        int count = 12;
         double interval = Math.max(1.0, (double) candidates.size() / (count - 1));
         System.out.print("\n\n\nCandidates:  ");
         for (double i = 0; i < candidates.size(); i += interval) {
