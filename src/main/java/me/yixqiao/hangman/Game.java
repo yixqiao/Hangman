@@ -4,6 +4,7 @@ public class Game {
     public StringBuilder word;
     public String actualWord;
     public int wrong = 0;
+    public boolean[] guessed = new boolean[26];
 
     public Game(int wLen) {
         word = new StringBuilder();
@@ -30,8 +31,15 @@ public class Game {
         }
         if (changed == 0)
             wrong++;
+        guessed[c-97] = true;
         return changed;
     }
 
-
+    public boolean isOver(){
+        for(int i=0; i<word.length(); i++){
+            if(word.charAt(i)=='.')
+                return false;
+        }
+        return true;
+    }
 }
