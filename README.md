@@ -2,6 +2,9 @@
 Computer plays hangman by a pretty simple algorithm.
 
 ## Quickstart
+[![Run on Repl.it](https://repl.it/badge/github/yixqiao/Hangman)](https://repl.it/github/yixqiao/Hangman)  
+
+## Local Quickstart:
 1. Clone repository
 2. Run `./gradle build`
 3. Run `./gradle run --console=plain` (plain console makes stdin neater)
