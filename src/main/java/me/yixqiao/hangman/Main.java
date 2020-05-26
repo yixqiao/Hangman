@@ -50,7 +50,7 @@ public class Main {
 
 
         int count = 12;
-        double interval = Math.max(1.0, (double) candidates.size() / (count - 1));
+        double interval = Math.max(1.0, (double) (candidates.size() - 1) / (count - 1));
         System.out.print("\n\n\nCandidates:  ");
         for (double i = 0; i < candidates.size(); i += interval) {
             System.out.print(candidates.get((int) i) + "  ");
