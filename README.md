@@ -3,7 +3,8 @@ Computer plays hangman by a pretty simple algorithm.
 
 ## Quickstart
 [![Run on Repl.it](https://repl.it/badge/github/yixqiao/Hangman)](https://repl.it/github/yixqiao/Hangman)  
-*Note: gradle may take around a minute to set up on the first run.*
+*Note: Gradle may take around a minute to set up on the first run.  
+I would recommend running locally for the fastest experience.*
 
 ## Local Quickstart:
 1. Clone repository
