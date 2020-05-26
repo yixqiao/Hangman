@@ -36,9 +36,15 @@ public class Main {
         for (String curW : words) {
             if (curW.length() == game.word.length() && Pattern.matches(word, curW)) {
                 candidates.add(curW);
+                // boolean[] appears = new boolean[26];
                 for (int c = 0; c < curW.length(); c++) {
                     freq[curW.charAt(c) - 97]++;
+                    // appears[curW.charAt(c) - 97] = true;
                 }
+                // for (int i = 0; i < 26; i++) {
+                //     if (appears[i])
+                //         freq[i]++;
+                // }
             }
         }
 
